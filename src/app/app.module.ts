@@ -50,7 +50,7 @@ import { MatTableModule } from '@angular/material/table';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpInterceptorAuthService } from './services/http-interceptor-auth.service';
+import { authInterceptorProviders, HttpInterceptorAuthService } from './services/http-interceptor-auth.service';
 import { JwtUserAuthService } from './services/jwt-user-auth-service.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
@@ -109,7 +109,7 @@ import { ProductListComponent } from './product-list/productslist.component';
   ],
   providers: [
     JwtUserAuthService,
-    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorAuthService, multi: true },
+    authInterceptorProviders,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS }
   ],
