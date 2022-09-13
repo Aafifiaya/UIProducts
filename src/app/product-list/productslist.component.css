@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap');
+mat-grid-tile {
+    margin-right: 20% !important;
+}
+
+.cardContainer {
+    margin: 10px;
+}
+
+button {
+    box-shadow: none !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+mat-label {
+    float: right;
+}

@@ -1,0 +1,64 @@
+.returnButton{
+  margin-left: 95%;
+}
+
+.content{
+  justify-items: center;
+  justify-content: center;
+  width: 450px;
+}
+
+mat-form-field
+{
+  width:80% ;
+  display: block;
+  margin : 0 auto;
+  margin-top: 5px;
+}
+
+
+h1{
+  text-align: center;
+  font-weight: 700;
+}
+
+.mat-flat-button{
+  width: 50%;
+  height: auto;
+  align-content: center;
+  color: white;
+  background: black;
+  display: block;
+  margin : 0 auto;
+  margin-top: 13px;
+  margin-bottom: 3px;
+  border-radius: 15px;
+}
+
+.text-link{
+color:blueviolet;
+font-size: 12px;
+text-decoration: none;
+margin-left: 69%;
+margin-bottom: 10px;
+display: block;
+
+}
+
+.button-row{
+  margin-top: 15px;
+  margin-left: 32%;
+  font-size: 12px;
+  display: block;
+
+
+
+}
+
+.buttonSignup{
+  color:blueviolet;
+text-decoration: none;
+}
+.cont {
+  background-color: transparent;
+}
