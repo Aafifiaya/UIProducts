@@ -28,7 +28,7 @@ export class LoginFormComponent implements OnInit {
         this.route.navigate(['Products']);
       },
       (error) => {
-        console.log(error);
+        this.loginValid=false
       }
     );
   }

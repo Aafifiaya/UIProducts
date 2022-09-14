@@ -8,9 +8,11 @@
     <div mat-dialog-content class="content">
         <form #loginForm="ngForm">
             <h1 mat-dialog-title>Welcome Back !</h1>
-            <mat-error *ngIf="!loginValid">
+
+            <mat-error style="text-align:center" *ngIf="!loginValid">
                 The username and password were not recognized
             </mat-error>
+
 
 
 

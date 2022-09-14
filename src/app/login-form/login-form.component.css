@@ -57,21 +57,3 @@ h1 {
 .cont {
     background-color: transparent;
 }
-
-
-/* ::ng-deep .mat-focused .mat-form-field-label {
-
-color: black !important;
-
-}
- ::ng-deep.mat-form-field-underline {
-
-background-color: black !important;
-
-}
-::ng-deep.mat-form-field-ripple {
-
-background-color: black !important;
-
-}
-*/
