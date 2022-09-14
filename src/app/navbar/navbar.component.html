@@ -1,10 +1,13 @@
-<mat-toolbar color="black">
+<mat-toolbar style="background-color: black;color: white;">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Product Manager</span>
     <span class="example-spacer"></span>
-    <button mat-raised-button class="loginBtn" style="background-color: white; color: black;" (click)="open()">
+    <button mat-raised-button class="loginBtn" style="background-color: white; color: black;" *ngIf="logedIn==='false'" (click)="open()">
       Login
+    </button>
+    <button mat-raised-button class="loginBtn" style="background-color: white; color: black;" *ngIf="logedIn==='true'" (click)="logout()">
+      Logout
     </button>
 </mat-toolbar>

@@ -52,6 +52,7 @@ export class JwtUserAuthService {
     sessionStorage.removeItem(AUTHENTICATED_USER);
     sessionStorage.removeItem(TOKEN);
     sessionStorage.removeItem(ROLES);
-    this.router.navigate(['login'])
+    sessionStorage.setItem('logedIn', 'false');
+    this.router.navigate([''])
   }
 }

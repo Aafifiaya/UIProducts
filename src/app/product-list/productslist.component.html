@@ -1,17 +1,55 @@
-<mat-grid-list cols="4" rowHeight="500px">
-    <mat-grid-tile *ngFor="let item of products">
-        <mat-card class="cardContainer" style="background-color:black;">
-            <img mat-card-image style="height: 280px;width:370px;" [src]="item.image" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <h3>{{item.name}}</h3>
-                <mat-label>Price: <span>{{item.price}}</span></mat-label>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-mini-fab style="background-color: white;"><mat-icon>edit</mat-icon></button>
-                <button mat-mini-fab style="background-color: darkred; color:white;"><mat-icon>delete_outline</mat-icon></button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
+<app-navbar></app-navbar>
+<div class="mt-1 mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+        <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-</mat-grid-list>
+        <!-- Position Column -->
+        <ng-container matColumnDef="No">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="view">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <a [routerLink]="['/Product',element.id]">
+                    <mat-icon color="primary">visibility</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <a [routerLink]="['/Product',element.id]">
+                    <mat-icon color="primary">edit</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <a [routerLink]="['/Product',element.id]">
+                    <mat-icon color="primary">delete_outline</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

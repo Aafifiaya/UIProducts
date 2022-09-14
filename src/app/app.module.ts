@@ -55,12 +55,14 @@ import { JwtUserAuthService } from './services/jwt-user-auth-service.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
 import { ProductListComponent } from './product-list/productslist.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     NavbarComponent,
-    ProductListComponent
+    ProductListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

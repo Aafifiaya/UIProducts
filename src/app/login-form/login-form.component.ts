@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, RouterLink } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { JwtUserAuthService } from '../services/jwt-user-auth-service.service';
 
 @Component({
@@ -22,6 +23,7 @@ export class LoginFormComponent implements OnInit {
     console.log(this.password);
     this.jwtUserAuth.authenticate(this.username, this.password).subscribe(
       (res) => {
+        sessionStorage.setItem('logedIn', 'true');
         this.dialog.closeAll()
         this.route.navigate(['Products']);
       },

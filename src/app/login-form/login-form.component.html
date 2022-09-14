@@ -16,28 +16,28 @@
 
             <mat-form-field appearance="standard">
                 <mat-label>Enter your username</mat-label>
-                <input [(ngModel)]="username" matInput type="username" name="username" required username="true">
+                <input [(ngModel)]=" username " matInput type="username " name="username ">
                 <mat-error>Invalid username</mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="standard">
                 <mat-label>Enter your password</mat-label>
-                <input [(ngModel)]="password" matInput #x type="password" [(ngModel)]="password" name="password" required>
-                <mat-icon matSuffix (click)="x.type=x.type=='password'?'text':'password'">remove_red_eye</mat-icon>
+                <input [(ngModel)]="password " matInput #x type="password " [(ngModel)]="password " name="password " required>
+                <mat-icon matSuffix (click)="x.type=x.type=='password' ? 'text': 'password' ">remove_red_eye</mat-icon>
                 <mat-error>Invalid password</mat-error>
             </mat-form-field>
 
 
-            <div class="link">
-                <a class="text-link" (click)="openSetEmail()">Forgot Password?</a>
+            <div class="link ">
+                <a class="text-link " (click)="openSetEmail() ">Forgot Password?</a>
             </div>
 
 
-            <button class="buttonSignin" (click)="onSubmit()" mat-flat-button>Sign In</button>
+            <button class="buttonSignin " (click)="onSubmit() " mat-flat-button>Sign In</button>
         </form>
 
-        <div class="button-row">
-            <p>Don't have an account? <a class="buttonSignup" (click)="openSignUP()">Sign up</a>
+        <div class="button-row ">
+            <p>Don't have an account? <a class="buttonSignup " (click)="openSignUP() ">Sign up</a>
             </p>
         </div>
     </div>
