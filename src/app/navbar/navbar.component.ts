@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   }
   open(){
     this.md.open(LoginFormComponent, {
+      panelClass:'my-class',
       scrollStrategy : new NoopScrollStrategy
     })
 

@@ -1,15 +1,14 @@
 <mat-grid-list cols="4" rowHeight="500px">
     <mat-grid-tile *ngFor="let item of products">
-        <mat-card class="cardContainer">
+        <mat-card class="cardContainer" style="background-color:black;">
             <img mat-card-image style="height: 280px;width:370px;" [src]="item.image" alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <h3>{{item.name}}</h3>
                 <mat-label>Price: <span>{{item.price}}</span></mat-label>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-mini-fab style="background-color: black;"><mat-icon>add_shopping_cart</mat-icon></button>
-                <button mat-mini-fab style="background-color: black;"><mat-icon>edit</mat-icon></button>
-                <button mat-mini-fab style="background-color: red;"><mat-icon>delete_outline</mat-icon></button>
+                <button mat-mini-fab style="background-color: white;"><mat-icon>edit</mat-icon></button>
+                <button mat-mini-fab style="background-color: darkred; color:white;"><mat-icon>delete_outline</mat-icon></button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
